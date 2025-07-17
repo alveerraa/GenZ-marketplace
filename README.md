@@ -1,6 +1,6 @@
 # 🛍️ Gen-Z Marketplace
 
-**Gen-Z Marketplace** is a modern e-commerce platform built for Gen-Z users to browse, wishlist, and purchase trendy items. The project focuses on a clean UI, responsive design, user authentication, and full-stack functionality with wishlist and cart features.
+**Gen-Z Marketplace** is a functional demo app built for Gen-Z users to browse, wishlist, and purchase trendy items. The project focuses on a clean UI, responsive design, user authentication, and full-stack functionality with wishlist and cart features.
 
 ---
 
