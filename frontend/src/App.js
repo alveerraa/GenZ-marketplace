@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import Login from "./pages/Login";
-import ProductDetail from "./pages/ProductDetail";
 import Profile from "./pages/Profile";
 import EditProduct from "./pages/EditProduct";
 import Info from "./pages/Info";
@@ -31,7 +30,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/mylist/:id" element={<Profile />} />
           <Route path="/edit/:id" element={<EditProduct />} />
           <Route path="/info" element={<Info />} />
