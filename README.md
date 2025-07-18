@@ -4,6 +4,15 @@
 
 ---
 
+🚀 Deployment
+
+🔗 Live Links
+Frontend (Vercel): https://gen-z-marketplace.vercel.app/
+
+Backend (Render): https://genz-marketplace.onrender.com
+
+---
+
 ## 🚀 Features Implemented
 
 - 🔐 **User Authentication** with Sign-Up, Login, JWT, and persistent localStorage
