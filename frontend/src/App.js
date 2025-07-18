@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 import Wishlist from "./pages/Wishlist";
 import Cart from "./pages/Cart";
 import Explore from "./pages/Explore";
-
+import { AuthProvider } from "./context/AuthContext"; // ✅ Import
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -23,22 +23,24 @@ function App() {
   }, [darkMode]);
 
   return (
-    <BrowserRouter>
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <div className="page-container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/upload" element={<Upload />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/mylist/:id" element={<Profile />} />
-          <Route path="/edit/:id" element={<EditProduct />} />
-          <Route path="/info" element={<Info />} />
-          <Route path="/wishlist" element={<Wishlist />} />
-<Route path="/cart" element={<Cart />} />
-<Route path="/explore" element={<Explore />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
+    <AuthProvider> {/* ✅ Wrap everything inside AuthProvider */}
+      <BrowserRouter>
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <div className="page-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/upload" element={<Upload />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/mylist/:id" element={<Profile />} />
+            <Route path="/edit/:id" element={<EditProduct />} />
+            <Route path="/info" element={<Info />} />
+            <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/explore" element={<Explore />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

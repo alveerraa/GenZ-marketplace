@@ -3,19 +3,33 @@ import API from "../utils/api";
 
 function Cart() {
   const [cart, setCart] = useState([]);
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
-    API.get("/cart")
+    if (!token) {
+      alert("Please login to view your cart.");
+      return;
+    }
+
+    API.get("/cart", {
+      headers: { Authorization: `Bearer ${token}` },
+    })
       .then((res) => setCart(res.data))
-      .catch((err) => console.error("Cart fetch failed:", err));
-  }, []);
+      .catch((err) => {
+        console.error("Cart fetch failed:", err);
+        alert("Failed to load cart.");
+      });
+  }, [token]);
 
   const removeFromCart = async (productId) => {
     try {
-      await API.delete(`/cart/${productId}`);
+      await API.delete(`/cart/${productId}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
       setCart((prev) => prev.filter((p) => p._id !== productId));
     } catch (err) {
-      alert("Failed to remove from cart");
+      console.error(err);
+      alert("Failed to remove from cart.");
     }
   };
 

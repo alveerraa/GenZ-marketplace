@@ -49,46 +49,72 @@ nav a:hover {
 }
 
 /* === HOME / LANDING === */
-.home-landing {
+.home-hero {
+  background: linear-gradient(to bottom right, #ffe3ec, #fbe8ff);
+  min-height: 90vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 85vh;
-  background: linear-gradient(to bottom right, #ffe6f0, #f7faff);
-  text-align: center;
   padding: 2rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
 }
 
 .home-title {
   font-size: 3rem;
-  font-weight: 700;
-  color: #ff4081;
+  color: #ff2d75;
   margin-bottom: 1rem;
+}
+
+.highlight {
+  font-weight: bold;
 }
 
 .home-subtitle {
   font-size: 1.3rem;
-  color: #444;
-  margin-bottom: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
 }
 
 .explore-btn {
-  font-size: 1.1rem;
-  background-color: #ff69b4;
+  background-color: #ff5ab6;
   color: white;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
   border: none;
   border-radius: 30px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .explore-btn:hover {
-  background-color: #ff85c1;
-  transform: scale(1.05);
+  background-color: #ff2d75;
 }
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+}
+
 
 /* === AUTH FORMS === */
 .login-container,
@@ -564,4 +590,107 @@ button:hover {
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.upload-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.upload-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.upload-form .input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.upload-form .input-group input,
+.upload-form .input-group textarea {
+  width: 100%;
+  padding: 14px 12px 14px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.upload-form .input-group label {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background: #fff;
+  padding: 0 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.file-input-wrapper {
+  margin: 20px 0;
+}
+
+.file-input-wrapper input[type="file"] {
+  font-size: 16px;
+}
+
+.upload-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #2d89ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.upload-btn:hover {
+  background-color: #1a63d3;
 }

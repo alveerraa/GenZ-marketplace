@@ -15,9 +15,10 @@ function Login() {
       const endpoint = isSignup ? "/auth/signup" : "/auth/login";
       const payload = isSignup ? { name, email, password } : { email, password };
       const res = await API.post(endpoint, payload);
-      const user = res.data;
+
+      const { token, user } = res.data; // ✅ correctly extracting
+      localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
-      if (user.token) localStorage.setItem("token", user.token);
       navigate("/");
     } catch (err) {
       alert(err.response?.data?.message || "Something went wrong");
