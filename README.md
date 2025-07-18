@@ -16,7 +16,6 @@
 - 👤 **Session Persistence** using localStorage
 - 🗂️ **Protected Routes** for wishlist, cart, and upload functionality
 - ⚙️ **Frontend and Backend** separated using the MERN stack
-- Cloud integration
 
 ---
 
@@ -58,6 +57,7 @@
 - 🆕 Profile Settings Page (edit name, email, etc.)
 - 🆕 DM Seller to Buy
 - 📱 **Full Mobile Responsiveness**
+- 👑 Cloud integration
 
 ---
 
