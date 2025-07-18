@@ -54,6 +54,8 @@
 - 🔍 **Search and Filter Products**
 - 🌐 **Pagination & Infinite Scrolling**
 - 👑 **Admin Dashboard** for managing users and products
+- 🆕 Profile Settings Page (edit name, email, etc.)
+- 🆕 DM Seller to Buy
 - 📱 **Full Mobile Responsiveness**
 
 ---
