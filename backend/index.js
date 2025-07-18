@@ -6,6 +6,10 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+app.get('/', (req, res) => {
+  res.send('🎉 Gen-Z Marketplace backend is running!');
+});
+
 // Middleware
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 app.use(express.json());
