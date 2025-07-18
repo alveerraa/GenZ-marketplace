@@ -1,19 +1,31 @@
 # 🛍️ Gen-Z Marketplace
 
-**Gen-Z Marketplace** is a modern e-commerce platform built for Gen-Z users to browse, wishlist, and purchase trendy items. The project focuses on a clean UI, responsive design, user authentication, and full-stack functionality with wishlist and cart features.
+**Gen-Z Marketplace** is a full-stack e-commerce demo built for users to browse, wishlist, and purchase trendy products. It features clean UI, responsive design, secure authentication, and seamless user experience.
 
 ---
 
 ## 🚀 Features Implemented
 
-- 🔐 User Sign-Up, Login & Authentication (JWT)
-- 📦 Product Upload (Admin)
-- 💖 Add to Wishlist
-- 🛒 Add to Cart
-- ✅ Remove from Wishlist & Cart
-- 🖼️ Product Image Upload with Preview
-- 👤 Persistent User Data via localStorage
-- 📁 Frontend & Backend built separately (MERN stack)
+- 🔐 **User Authentication** with Sign-Up, Login, JWT, and persistent localStorage
+- 📦 **Product Upload** (with image support for admins)
+- 💖 **Add to Wishlist**
+- 🛒 **Add to Cart**
+- ❌ **Remove from Wishlist & Cart**
+- 🖼️ **Product Image Upload** with Multer
+- 🌈 **Aesthetic Hero Section** with background gradient and illustrations
+- 👤 **Session Persistence** using localStorage
+- 🗂️ **Protected Routes** for wishlist, cart, and upload functionality
+- ⚙️ **Frontend and Backend** separated using the MERN stack
+
+---
+
+## 🖼️ UI Highlights
+
+- 🎨 Gen-Z themed color palette
+- 🪄 Hero section with gradient background + custom illustration
+- 📱 Mobile-first responsive design (partially implemented)
+- 🔗 Conditional navigation based on login status
+- ⚠️ Protected actions like "Add to Cart" or "Wishlist" unless user is logged in
 
 ---
 
@@ -21,27 +33,31 @@
 
 ### 🔹 Frontend
 - React.js
+- React Router DOM
 - Axios
-- React Router
+- CSS Modules / Custom Styling
 
 ### 🔹 Backend
 - Node.js
 - Express.js
-- MongoDB
-- Mongoose
+- MongoDB + Mongoose
 - Multer (for image upload)
-- JWT (for authentication)
+- JWT for secure user auth
+- CORS, dotenv, bcryptjs
 
 ---
 
 ## 🧠 Future Improvements
 
-- 🧾 Order Management & Checkout
-- 💳 Payment Gateway Integration (Razorpay or Stripe)
-- 👑 Admin Dashboard for managing users/products
-- 🌐 Pagination & Filtering
-- 🔍 Search functionality
-- 📱 Mobile Responsive Design (Fully)
+- 💳 **Payment Gateway Integration** (Razorpay or Stripe)
+- 🧾 **Order Management & Checkout Flow**
+- 🔍 **Search and Filter Products**
+- 🌐 **Pagination & Infinite Scrolling**
+- 👑 **Admin Dashboard** for managing users and products
+- 🆕 Profile Settings Page (edit name, email, etc.)
+- 🆕 DM Seller to Buy
+- 📱 **Full Mobile Responsiveness**
+- 👑 Cloud integration
 
 ---
 
@@ -49,7 +65,8 @@
 
 ```bash
 genz-marketplace/
-├── backend/              # Node.js backend
-├── frontend/             # React frontend
+├── backend/              # Node.js backend (API routes, models, controllers)
+├── frontend/             # React frontend (pages, components, styles)
+│   └── assets/           # Static files like illustrations, images
 ├── README.md
 └── .gitignore
