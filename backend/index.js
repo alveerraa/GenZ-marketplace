@@ -1,13 +1,17 @@
+require("dotenv").config();
+
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-require("dotenv").config();
 
 const app = express();
 
 // Middleware
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 app.use(express.json());
+
+// 🟡 This serves uploaded images from the "uploads" folder
+app.use("/uploads", express.static("uploads"));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
