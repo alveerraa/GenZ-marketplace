@@ -6,11 +6,7 @@
 
 🚀 Deployment
 
-🔗 Live Links
-Frontend (Vercel): https://gen-z-marketplace.vercel.app/
-
-Backend (Render): https://genz-marketplace.onrender.com
-
+🔗 Live Links Coming Soon!
 ---
 
 ## 🚀 Features Implemented
